@@ -158,6 +158,9 @@ export class Buffer extends EventEmitter<{
      */
     public destroyed = false;
 
+    /** Used by gl geometry system to track swapped buffers */
+    public refCount = 0;
+
     /**
      * Creates a new Buffer with the given options
      * @param options - the options for the buffer
